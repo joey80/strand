@@ -1,4 +1,3 @@
-const test = (str: string) => console.log(`${str} is a string`);
-test('joey');
+const test = (str: string) => `${str} is a string`;
 
 export { test };
