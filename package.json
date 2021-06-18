@@ -1,0 +1,23 @@
+{
+  "name": "strand",
+  "version": "0.0.1",
+  "description": "string utilities",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joey80/strand.git"
+  },
+  "keywords": [
+    "string",
+    "utility"
+  ],
+  "author": "Joey Leger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joey80/strand/issues"
+  },
+  "homepage": "https://github.com/joey80/strand#readme"
+}
