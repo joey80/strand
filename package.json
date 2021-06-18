@@ -1,6 +1,6 @@
 {
   "name": "strand",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "string utilities",
   "main": "index.ts",
   "scripts": {
@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/joey80/strand/issues"
   },
-  "homepage": "https://github.com/joey80/strand#readme"
+  "homepage": "https://github.com/joey80/strand#readme",
+  "release": {
+    "branches": [
+      "release"
+    ]
+  },
+  "devDependencies": {
+    "semantic-release": "^17.4.4"
+  }
 }
