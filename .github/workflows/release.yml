@@ -16,15 +16,6 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: npm ci
-      - name: Run Tests
-        uses: mattallty/jest-github-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          test-command: 'npm run test'
-          # Runs tests related to the changes since the base branch of your pull request
-          # Default to false if not set
-          changes-only: true
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
