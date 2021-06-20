@@ -9,14 +9,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-        run: yarn install
+      - run: yarn install
       - name: Run Tests
-        uses: mattallty/jest-github-action@v1.0.3
         run: yarn jest --coverage --json --outputFile=/home/runner/work/_actions/mattallty/jest-github-action/v1/dist/jest.results.json
+      - uses: mattallty/jest-github-action@v1.0.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          test-command: 'npm run test'
+          test-command: 'echo done'
           # Runs tests related to the changes since the base branch of your pull request
           # Default to false if not set
           changes-only: true
