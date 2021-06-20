@@ -1,3 +1,21 @@
-const test = (str: string) => `${str} is a string`;
+import {
+  camelCase,
+  kebabCase,
+  limitChars,
+  limitWords,
+  pascalCase,
+  removeWhitespace,
+  snakeCase,
+  titleCase,
+} from './methods'
 
-export { test };
+export {
+  camelCase,
+  kebabCase,
+  limitChars,
+  limitWords,
+  pascalCase,
+  removeWhitespace,
+  snakeCase,
+  titleCase,
+}
