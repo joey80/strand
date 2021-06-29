@@ -5,6 +5,10 @@ import {
   limitWords,
   pascalCase,
   removeWhitespace,
+  revertCamelCase,
+  revertKebabCase,
+  revertPascalCase,
+  revertSnakeCase,
   snakeCase,
   titleCase,
 } from './methods';
@@ -12,21 +16,25 @@ import {
 describe('String Methods', () => {
   describe('camelCase', () => {
     it('should return the correct camelCasing of a string', () => {
-      const assert1 = camelCase('joey leger');
-      const assert2 = camelCase('joey leger IS MY name');
+      const assert1 = camelCase('first word second word');
+      const assert2 = camelCase('this is a test');
+      const assert3 = camelCase('you are just 1 person');
 
-      expect(assert1).toBe('joeyLeger');
-      expect(assert2).toBe('joeyLegerIsMyName');
+      expect(assert1).toBe('firstWordSecondWord');
+      expect(assert2).toBe('thisIsATest');
+      expect(assert3).toBe('youAreJust1Person');
     });
   });
 
   describe('kebabCase', () => {
     it('should return the correct kebab-casing of a string', () => {
-      const assert1 = kebabCase('joey leger');
-      const assert2 = kebabCase('joey leger IS MY name');
+      const assert1 = kebabCase('first word second word');
+      const assert2 = kebabCase('this is a test');
+      const assert3 = kebabCase('you are just 1 person');
 
-      expect(assert1).toBe('joey-leger');
-      expect(assert2).toBe('joey-leger-IS-MY-name');
+      expect(assert1).toBe('first-word-second-word');
+      expect(assert2).toBe('this-is-a-test');
+      expect(assert3).toBe('you-are-just-1-person');
     });
   });
 
@@ -64,11 +72,13 @@ describe('String Methods', () => {
 
   describe('pascalCase', () => {
     it('should return the correct PascalCasing of a string', () => {
-      const assert1 = pascalCase('joey leger');
-      const assert2 = pascalCase('joey leger IS MY name');
+      const assert1 = pascalCase('first word second word');
+      const assert2 = pascalCase('this is a test');
+      const assert3 = pascalCase('you are just 1 person');
 
-      expect(assert1).toBe('JoeyLeger');
-      expect(assert2).toBe('JoeyLegerIsMyName');
+      expect(assert1).toBe('FirstWordSecondWord');
+      expect(assert2).toBe('ThisIsATest');
+      expect(assert3).toBe('YouAreJust1Person');
     });
   });
 
@@ -82,25 +92,77 @@ describe('String Methods', () => {
     });
   });
 
+  describe('revertCamelCase', () => {
+    it('should return a camelCased string as a normal lowercased string', () => {
+      const assert1 = revertCamelCase('firstWordSecondWord');
+      const assert2 = revertCamelCase('thisIsATest');
+      const assert3 = revertCamelCase('youAreJust1Person');
+
+      expect(assert1).toBe('first word second word');
+      expect(assert2).toBe('this is a test');
+      expect(assert3).toBe('you are just 1 person');
+    });
+  });
+
+  describe('revertKebabCase', () => {
+    it('should return a kebab-cased string as a normal lowercased string', () => {
+      const assert1 = revertKebabCase('first-word-second-word');
+      const assert2 = revertKebabCase('this-is-a-test');
+      const assert3 = revertKebabCase('you-are-just-1-person');
+
+      expect(assert1).toBe('first word second word');
+      expect(assert2).toBe('this is a test');
+      expect(assert3).toBe('you are just 1 person');
+    });
+  });
+
+  describe('revertPascalCase', () => {
+    it('should return a PascalCased string as a normal lowercased string', () => {
+      const assert1 = revertPascalCase('FirstWordSecondWord');
+      const assert2 = revertPascalCase('ThisIsATest');
+      const assert3 = revertPascalCase('YouAreJust1Person');
+
+      expect(assert1).toBe('first word second word');
+      expect(assert2).toBe('this is a test');
+      expect(assert3).toBe('you are just 1 person');
+    });
+  });
+
+  describe('revertSnakeCase', () => {
+    it('should return a snake_cased string as a normal lowercased string', () => {
+      const assert1 = revertSnakeCase('first_word_second_word');
+      const assert2 = revertSnakeCase('this_is_a_test');
+      const assert3 = revertSnakeCase('you_are_just_1_person');
+
+      expect(assert1).toBe('first word second word');
+      expect(assert2).toBe('this is a test');
+      expect(assert3).toBe('you are just 1 person');
+    });
+  });
+
   describe('snakeCase', () => {
     it('should return the correct snake_casing of a string', () => {
-      const assert1 = snakeCase('joey leger');
-      const assert2 = snakeCase('joey leger IS MY name');
+      const assert1 = snakeCase('first word second word');
+      const assert2 = snakeCase('this is a test');
+      const assert3 = snakeCase('you are just 1 person');
 
-      expect(assert1).toBe('joey_leger');
-      expect(assert2).toBe('joey_leger_IS_MY_name');
+      expect(assert1).toBe('first_word_second_word');
+      expect(assert2).toBe('this_is_a_test');
+      expect(assert3).toBe('you_are_just_1_person');
     });
   });
 
   describe('titleCase', () => {
     it('should return the correct Title Casing of a string', () => {
-      const assert1 = titleCase('joey leger');
-      const assert2 = titleCase('joey leger IS MY name');
+      const assert1 = titleCase('first word second word');
+      const assert2 = titleCase('this is a test');
       const assert3 = titleCase('a');
+      const assert4 = titleCase('you are just 1 person');
 
-      expect(assert1).toBe('Joey Leger');
-      expect(assert2).toBe('Joey Leger Is My Name');
+      expect(assert1).toBe('First Word Second Word');
+      expect(assert2).toBe('This Is A Test');
       expect(assert3).toBe('A');
+      expect(assert4).toBe('You Are Just 1 Person');
     });
   });
 });

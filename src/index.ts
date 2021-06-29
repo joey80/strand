@@ -5,12 +5,17 @@ import {
   limitWords,
   pascalCase,
   removeWhitespace,
+  revertCamelCase,
+  revertKebabCase,
+  revertPascalCase,
+  revertSnakeCase,
   snakeCase,
   titleCase,
 } from './methods';
 
 class Strand {
   private string: string;
+
   static chain(str: string) {
     return new Strand(str);
   }
@@ -53,6 +58,26 @@ class Strand {
     return this;
   }
 
+  revertCamelCase() {
+    this.string = revertCamelCase(this.string);
+    return this;
+  }
+
+  revertKebabCase() {
+    this.string = revertKebabCase(this.string);
+    return this;
+  }
+
+  revertPascalCase() {
+    this.string = revertPascalCase(this.string);
+    return this;
+  }
+
+  revertSnakeCase() {
+    this.string = revertSnakeCase(this.string);
+    return this;
+  }
+
   snakeCase() {
     this.string = snakeCase(this.string);
     return this;
@@ -66,6 +91,8 @@ class Strand {
 
 const { chain } = Strand;
 
+console.log(chain('joey leger').camelCase().revertCamelCase());
+
 export {
   camelCase,
   chain,
@@ -74,6 +101,10 @@ export {
   limitWords,
   pascalCase,
   removeWhitespace,
+  revertCamelCase,
+  revertKebabCase,
+  revertPascalCase,
+  revertSnakeCase,
   snakeCase,
   titleCase,
 };
