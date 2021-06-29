@@ -1,8 +1,4 @@
-const camelCase = (str: string) =>
-  str
-    .split(' ')
-    .map((elm, index) => (index === 0 ? elm.toLowerCase() : titleCase(elm)))
-    .join('');
+const camelCase = (str: string) => pascalCase(str).replace(/\b(\w)/g, s => s.toLowerCase());
 
 const kebabCase = (str: string) => str.split(' ').join('-');
 
@@ -12,11 +8,7 @@ const limitChars = (str: string, limit: number, append = '') =>
 const limitWords = (str: string, limit: number, append = '') =>
   `${str.split(' ').slice(0, limit).join(' ')} ${append}`.trim();
 
-const pascalCase = (str: string) =>
-  str
-    .split(' ')
-    .map(elm => titleCase(elm))
-    .join('');
+const pascalCase = (str: string) => titleCase(str).split(' ').join('');
 
 const removeWhitespace = (str: string) => str.replace(/\s(?=\s)/g, '').trim();
 
