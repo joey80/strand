@@ -91,8 +91,6 @@ class Strand {
 
 const { chain } = Strand;
 
-console.log(chain('joey leger').camelCase().revertCamelCase());
-
 export {
   camelCase,
   chain,
