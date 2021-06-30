@@ -12,19 +12,11 @@ const pascalCase = (str: string) => titleCase(str).split(' ').join('');
 
 const removeWhitespace = (str: string) => str.replace(/\s(?=\s)/g, '').trim();
 
-const revertCamelCase = (str: string) =>
-  str
-    .split(/(?=[A-Z]+|[0-9])/)
-    .join(' ')
-    .toLowerCase();
+const revertCamelCase = (str: string) => str.split(/(?=[A-Z]+|[0-9])/).join(' ');
 
 const revertKebabCase = (str: string) => str.split('-').join(' ');
 
-const revertPascalCase = (str: string) =>
-  str
-    .split(/(?=[A-Z]+|[0-9])/)
-    .join(' ')
-    .toLowerCase();
+const revertPascalCase = (str: string) => str.split(/(?=[A-Z]+|[0-9])/).join(' ');
 
 const revertSnakeCase = (str: string) => str.split('_').join(' ');
 
