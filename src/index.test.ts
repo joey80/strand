@@ -98,9 +98,9 @@ describe('String Methods', () => {
       const assert2 = revertCamelCase('thisIsATest');
       const assert3 = revertCamelCase('youAreJust1Person');
 
-      expect(assert1).toBe('first word second word');
-      expect(assert2).toBe('this is a test');
-      expect(assert3).toBe('you are just 1 person');
+      expect(assert1).toBe('first Word Second Word');
+      expect(assert2).toBe('this Is A Test');
+      expect(assert3).toBe('you Are Just 1 Person');
     });
   });
 
@@ -122,9 +122,9 @@ describe('String Methods', () => {
       const assert2 = revertPascalCase('ThisIsATest');
       const assert3 = revertPascalCase('YouAreJust1Person');
 
-      expect(assert1).toBe('first word second word');
-      expect(assert2).toBe('this is a test');
-      expect(assert3).toBe('you are just 1 person');
+      expect(assert1).toBe('First Word Second Word');
+      expect(assert2).toBe('This Is A Test');
+      expect(assert3).toBe('You Are Just 1 Person');
     });
   });
 
