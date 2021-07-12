@@ -1,1 +1,6 @@
 theme: jekyll-theme-midnight
+defaults:
+  - scope:
+      path: 'index.html'
+    values:
+      layout: 'home'
