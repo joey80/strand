@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "private": true,
   "scripts": {
+    "format": "prettier --write .",
     "test": "jest",
     "semantic-release": "semantic-release",
     "start": "npx ts-node src/index.ts"
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@types/jest": "^27.0.2",
     "jest": "^27.3.1",
+    "prettier": "^2.4.1",
     "semantic-release": "^18.0.0",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
