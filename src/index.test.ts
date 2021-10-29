@@ -1,5 +1,6 @@
 import {
   camelCase,
+  chain,
   kebabCase,
   limitChars,
   limitWords,
@@ -11,7 +12,19 @@ import {
   revertSnakeCase,
   snakeCase,
   titleCase,
-} from './methods';
+} from './index';
+
+describe('Chain class', () => {
+  it('chains together string methods', () => {
+    const assert1 = chain('first word second word').kebabCase().get();
+    const assert2 = chain('this is a test').titleCase().get();
+    const assert3 = chain('you are just 1 person').snakeCase().limitChars(7).get();
+
+    expect(assert1).toBe('first-word-second-word');
+    expect(assert2).toBe('This Is A Test');
+    expect(assert3).toBe('you_are');
+  });
+});
 
 describe('String Methods', () => {
   describe('camelCase', () => {
