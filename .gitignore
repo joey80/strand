@@ -8,6 +8,10 @@
 
 # production
 /build
+/src/index.js
+/src/index.js.map
+/dist
+/.parcel-cache
 
 # misc
 .DS_Store
