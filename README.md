@@ -2,20 +2,20 @@
 
 # What is Strand?
 
-Strand is a collection of string utility methods that makes converting strings a breeze.
+Strand is a collection of string utility methods built in Typescript that makes converting strings a breeze.
 
 ## How to install
 
 With NPM use
 
 ```
-npm install @strand
+npm install strand-ts
 ```
 
 Or Yarn
 
 ```
-yarn add @strand
+yarn add strand-ts
 ```
 
 ## How to use
@@ -25,7 +25,7 @@ There are two ways of using strand, either by a single method or using the 'chai
 ### The chain method
 
 ```
-import { chain } from '@strand';
+import { chain } from 'strand-ts';
 
 const string1 = chain('Some random String').snakeCase().get().toLowerCase();
 // 'some_random_string'
@@ -39,7 +39,7 @@ Chaining methods like this is meant to be similar to using the javascript string
 ### Single methods
 
 ```
-import { snakeCase, titleCase } from '@strand';
+import { snakeCase, titleCase } from 'strand-ts';
 
 const string1 = snakeCase('Some random String').toLowerCase();
 // 'some_random_string'
