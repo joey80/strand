@@ -1,6 +1,6 @@
 {
-  "name": "strand",
-  "version": "0.0.0-development",
+  "name": "strand-ts",
+  "version": "0.7.2",
   "description": "string utilities",
   "private": true,
   "scripts": {
