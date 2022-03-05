@@ -2,7 +2,7 @@
 
 # What is Strand?
 
-Talk about what Strand is here
+Strand is a collection of string utility methods that makes converting strings a breeze.
 
 ## How to install
 
